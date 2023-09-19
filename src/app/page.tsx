@@ -17,10 +17,10 @@ export default async function Home() {
   const products = await getData();
   return (
     <div className="flex gap-2 justify-center items-center h-screen">
-      <div className="grid grid-rows-2 p-4 border border-black">
+      <div className="grid grid-cols-3 gap-4 items-center">
         {products.map((product: any, index: number) => {
           return (
-            <div key={index}>
+            <div key={index} className="grid border border-black p-4">
               <div>
                 <Image
                   src={urlForImage(product.image).url()}
